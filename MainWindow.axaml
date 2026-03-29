@@ -1,0 +1,74 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="NetworkPortScanner.MainWindow"
+        Title="NetworkPortScanner"
+       RequestedThemeVariant="Light">
+   <Grid ShowGridLines="True" ColumnDefinitions="*,2*,*,2*,2*" RowDefinitions="*,*,*,*,*,*">
+
+        <TextBlock
+        Text="Сканер сетевых портов"
+        Foreground="Black"
+        Grid.Row="0"
+        Grid.Column="1"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        FontSize="16"/>
+
+        <TextBox Name="IP"
+        Watermark="Введите адрес IP"
+	    VerticalAlignment="Center"
+        Grid.Column="1"
+        Grid.Row="1"/>
+
+  <TextBox Name="DiapozonOt"
+      
+	    VerticalAlignment="Center"
+        Grid.Column="1"
+        Grid.Row="2"
+        Watermark="Диапозон портов от"/>
+
+<TextBox Name="DiapozonDo"
+        Grid.Column="1"
+        Grid.Row="3"
+        VerticalAlignment="Center"
+        Watermark="Диапозон портов до"/>
+
+        <TextBox Name="ColPotok"
+        Grid.Column="1"
+        Grid.Row="4"
+        VerticalAlignment="Center"
+        Watermark="Количества потоков"/>
+
+        <Button Name="Start"
+        Grid.Column="1"
+        Grid.Row="5"
+        Background="Gray"
+        Foreground="White"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Content="Старт"/>
+
+       
+
+	<ListBox Name="List"
+        Grid.Column="3"
+        Grid.ColumnSpan="3"
+        Grid.Row="0"
+        Grid.RowSpan="4"></ListBox>
+       <TextBlock Name="StatusText"
+           Grid.Column="3"
+           Grid.Row="4"
+           VerticalAlignment="Center"
+           Text=""/>
+
+         <ProgressBar Name="ScanProgress"
+        Grid.Column="3"
+        Grid.ColumnSpan="2"
+        Grid.Row="5"
+        ShowProgressText="True"/>   
+
+       </Grid>
+</Window>
